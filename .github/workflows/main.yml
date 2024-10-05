@@ -1,0 +1,20 @@
+name: Sync LeetCode Submissions
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # This will run the action every day at midnight
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Sync LeetCode Submissions
+      uses: joshcai/leetcode-sync@v1.7
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        leetcode-username: user2478hk
+        leetcode-password: ${{ Kl02abvarun@ }}
